@@ -11,5 +11,13 @@ node
     }
     }
 
+     stage("LintTest") {
+    nodejs(NodeJSInstallationName: 'nodejs15.2.1') {
+        sh 'npm eslint --save-dev'
+	sh 'npm run lint'
+    }
+    }
+
+
 
 }
