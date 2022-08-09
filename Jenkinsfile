@@ -42,7 +42,7 @@ node
     stage("predeployment") {
     nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'echo creating docker image'
-        sh 'docker build -t mnforba/node .'
+        sh 'docker build -t mnforba/rdicidr .'
 	sh 'docker push mnforba/node
     }
     }
