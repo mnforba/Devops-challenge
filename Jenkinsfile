@@ -36,7 +36,14 @@ node
     stage("ServeBuild") {
     nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'npm install -g serve'
-        sh 'npm serve -s build'
+        sh 'npm serve -s builiid'
+    }
+    }
+    stage("predeployment") {
+    nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
+        sh 'echo creating docker image'
+        sh 'docker build -t mnforba/node .'
+	sh 'docker push mnforba/node
     }
     }
 
