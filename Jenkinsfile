@@ -43,7 +43,7 @@ node
     nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'echo creating docker image'
         sh 'docker build -t mnforba/rdicidr .'
-	sh 'docker push mnforba/rdicidr
+	//sh 'docker push mnforba/rdicidr
     }
     }
 
